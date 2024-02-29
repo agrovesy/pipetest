@@ -14,8 +14,9 @@ pipeline{
         }
         stage("create the containers"){
             steps{
-                sh "docker run -d --name flask-app flask-app"
-                sh "docker run -d -p 80:80 --name webapp nginx1"
+                sh "docker network create workwork"
+                sh "docker run -d --network workwork --name flask-app flask-app"
+                sh "docker run -d --network workwork -p 80:80 --name webapp nginx1"
             }
         }
     }
