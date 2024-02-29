@@ -8,7 +8,7 @@ pipeline{
         }
         stage("where we at fam"){
             steps{
-                sh "echo pwd"
+                sh "echo hello there"
             }
         }
         stage("what files are there"){
