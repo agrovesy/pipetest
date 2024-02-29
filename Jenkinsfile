@@ -18,8 +18,7 @@ pipeline{
         }
         stage("add some files"){
             steps{
-                sh "touch ~/jenkins-pipelines/file.txt"
-                sh "mv ~/jenkins-pipelines/file.txt ~/jenkins-pipelines/file2.txt || true"
+                sh "bash move.sh"
             }
         }
     }
