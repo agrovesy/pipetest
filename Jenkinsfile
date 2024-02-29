@@ -1,5 +1,7 @@
 pipeline{
-    agent worker
+    agent {
+        label "worker"
+    }
     stages{
         stage("make a directory"){
             steps{
