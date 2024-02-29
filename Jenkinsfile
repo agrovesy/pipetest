@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent worker
     stages{
         stage("make a directory"){
             steps{
