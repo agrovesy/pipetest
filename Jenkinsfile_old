@@ -3,17 +3,17 @@ pipeline{
     stages{
         stage("make a directory"){
             steps{
-                sh "bash mkdir.sh || true"
+                sh "mkdir ~/jenkins-pipelines || true"
             }
         }
         stage("where we at fam"){
             steps{
-                sh "bash echo.sh"
+                sh "echo hello there"
             }
         }
         stage("what files are there"){
             steps{
-                sh "bash file_location.sh"
+                sh "ls -al"
             }
         }
         stage("add some files"){
