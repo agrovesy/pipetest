@@ -17,6 +17,6 @@ pipeline{
                 sh "docker run -d -p 80:80 --name webapp nginx1"
                 sh "docker run -d --name flaskapp flask-app"
             }
-
+        }
     }
 }
