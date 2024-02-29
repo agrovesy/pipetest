@@ -12,7 +12,7 @@ pipeline{
                 sh "docker build -t nginx1 ./nginx"
             }
         }
-        stage("what files are there"){
+        stage("create the containers"){
             steps{
                 sh "docker run -d --name flask-app flask-app"
                 sh "docker run -d -p 80:80 --name webapp nginx1"
